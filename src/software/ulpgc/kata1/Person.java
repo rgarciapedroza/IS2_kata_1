@@ -26,4 +26,12 @@ public class Person {
         this.name = name;
         this.bday = bday;
     }
+
+    public int getAge(){
+        return toYears(LocalDate.now().toEpochDay() - bday.toEpochDay());
+    }
+
+    private int toYears(long days){
+        return (int)(days/365.25);
+    }
 }
