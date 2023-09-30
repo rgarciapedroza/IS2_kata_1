@@ -6,6 +6,14 @@ public class Person {
     public final String name;
     public final LocalDate bday;
 
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", bday=" + bday +
+                '}';
+    }
+
     public String getName() {
         return name;
     }
